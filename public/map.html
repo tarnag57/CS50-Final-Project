@@ -1,0 +1,87 @@
+<!--
+
+index.html
+
+Computer Science 50
+Harvard University
+
+A mashup of Google Maps and Google News.
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+
+        <!-- http://getbootstrap.com/ -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
+
+        <!-- app's own CSS -->
+        <link href="css/styles.css" rel="stylesheet"/>
+
+        <!-- https://developers.google.com/maps/documentation/javascript/ -->
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+        <!-- http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/ -->
+        <script src="js/markerwithlabel_packed.js"></script>
+
+        <!-- http://jquery.com/ -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+
+        <!-- http://getbootstrap.com/ -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- http://underscorejs.org/ -->
+        <script src="js/underscore-min.js"></script>
+
+        <!-- https://github.com/twitter/typeahead.js/ -->
+        <script src="js/typeahead.jquery.js"></script>
+
+        <!-- app's own JavaScript -->
+        <script src="js/scripts.js"></script>
+        
+        <!-- webix widget -->
+        <link rel="stylesheet" href="http://cdn.webix.com/edge/webix.css" type="text/css"> 
+        <script src="http://cdn.webix.com/edge/webix.js" type="text/javascript"></script>  
+
+
+        <title>Trip Route</title>
+
+    </head>
+    <body>
+
+        <!-- fill viewport -->
+        <div id="container" stlye="width:100%;">
+
+            <!-- google search box -->
+            <input id="pac-input" class="controls" type="text" placeholder="Search Box" autofocus>    
+            
+            <!-- https://developers.google.com/maps/documentation/javascript/tutorial -->
+            <div id="map-canvas" style="width:915px; height:670px; float:left;"></div>
+            
+            <div id="left-control" style="width:450px; margin-left:915px; height:670px;">
+                
+                <!-- webix widget panel -->
+                <div id="widget" style="height:370px"></div>
+    
+                <!-- google directions panel -->
+                <div id="directions-panel" class="panel" style="height:300px; overflow-y:scroll;"></div>
+                
+            </div>
+
+            <!-- http://getbootstrap.com/css/#forms -->
+            <form class="form-inline" id="form" role="form">
+                <div class="form-group">
+                    <button id="markerbutton" type="button" class="btn btn-default" onclick="markerPlace()">Get marker</button>
+                    <button id="manualbutton" type="button" class="btn btn-default" onclick="manualSight()">Add sight manually</button>                    
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

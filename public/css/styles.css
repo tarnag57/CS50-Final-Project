@@ -1,0 +1,237 @@
+/**
+ * styles.css
+ *
+ * Computer Science 50
+ * Problem Set 8
+ *
+ * Global CSS.
+ */
+
+/* container */
+#container{
+    width: 1360px;
+    overflow: auto; 
+}
+
+.buttons{
+	height: 60px;
+	width: 80px;
+	float:right;
+}
+
+/* Directions panel */
+#panel, .panel {
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#panel select, #panel input, .panel select, .panel input {
+  font-size: 15px;
+}
+
+#panel select, .panel select {
+  width: 100%;
+}
+
+#panel i, .panel i {
+  font-size: 12px;
+}
+
+      #directions-panel {
+        float: right;
+        width: 450px;
+        overflow: auto;
+        overflow-y: scroll;
+      }
+
+      #map {
+        margin-right: 400px;
+      }
+
+      #control {
+        background: #fff;
+        padding: 5px;
+        font-size: 14px;
+        font-family: Arial;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        display: none;
+      }
+
+      #panel select, .panel select {
+        display: block;
+      }
+
+      @media print {
+        #map {
+          height: 500px;
+          margin: 0;
+        }
+
+        #directions-panel {
+          float: none;
+          width: auto;
+        }
+      }
+
+    /* Override Google Maps Icon style */
+    .adp-substep .adp-stepicon .adp-maneuver {
+        position: static;
+    }
+
+    /* Override Google Maps Icon Container style */
+    .adp-substep .adp-stepicon{
+        position: static;
+    }
+
+
+/* google search box */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
+}
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#target {
+  width: 345px;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 15px;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/* allow map to fill viewport */
+html, body, #map-canvas, .container-fluid
+{
+    /* height of these elements */
+    height: 100%;
+
+    /* no margin around these elements */
+    margin: 0;
+
+    /* disable scrollbars */
+    overflow: hidden;
+
+    /* no padding within these elements */
+    padding: 0;
+}
+
+/* align form to right of pan control */
+#form
+{
+    /* distance from left edge of viewport */
+    left: 100px;
+
+    /* position form "absolutely" where we want it */
+    position: absolute;
+
+    /* distance from top edge of viewport */
+    top: 0px;
+}
+
+/* stylize text box */
+#q
+{
+    /* override typeahead.js's transparent background */
+    background-color: #ffffff !important;
+
+    /* text box's width */
+    width: 300px;
+}
+
+/* stylize places' labels */
+.labels {
+  color: black;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* stylize button */
+#markerbutton
+{
+    margin-top: 16px;
+    margin-left: 340px;
+}
+
+#manualbutton
+{
+    margin-top: 16px;
+    margin-left: 0px;
+}
+
+/* stylize info window */
+#info
+{
+    /* no margin around this element */
+    margin: 0;
+
+    /* should be at least this width */
+    min-width: 200px;
+
+    /* allow scrollbars as needed */
+    overflow: auto;
+}
+
+/* stylize typeahead.js a la http://twitter.github.io/typeahead.js/css/examples.css */
+.tt-dropdown-menu
+{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 1px;
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 6px 12px;
+    width: 300px;
+}
+.tt-suggestion.tt-cursor {
+    background-color: #0097cf;
+    color: #fff;
+    cursor: pointer;
+}
+.tt-suggestion p {
+    margin: 0;
+}

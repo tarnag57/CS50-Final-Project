@@ -1,0 +1,47 @@
+$function()
+
+//refresh the markers
+refresh()
+
+//place new marker at the centre of the screen
+markerPlace()
+
+//remove a marker from markers[]
+removeMarker(index)
+
+//open form to manually add sight
+manualSight()
+
+//add user's marker as a sight
+addPlace()
+
+//load sights and place markers
+getMarkers()
+
+//add sight's marker to the map with infowindow (called by getMarkers())
+addMarker(lat, lng, wiki, spenttime)
+
+//load widget
+widget()
+
+//AJAX-based functions used by widget()
+listUp()
+listDown()
+listDelete()
+
+//google maps directions API
+directions()
+
+//add sight to the trip, changing marker & infocontent
+addTrip(index, name, number)
+
+//submit form of marker's infowindow
+subForm()
+
+//load edit sight form
+editSight(lat, lng, wiki, name, spenttime)
+
+//remove sight from database
+removeSight(lat, lng)
+
+FROM LINE 560 FUNCTIONS ARE CURRENTLY NOT USED
